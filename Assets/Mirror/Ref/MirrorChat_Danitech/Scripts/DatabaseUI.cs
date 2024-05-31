@@ -140,10 +140,10 @@ public class DatabaseUI : MonoBehaviour
             return;
         }
         Text_Log.text = string.Empty;
-        string query = string.IsNullOrWhiteSpace(Input_Query.text) ? "SELECT U_Name,U_Password FROM user_info"
+        string query = string.IsNullOrWhiteSpace(Input_Query.text) ? "SELECT U_Playerid,U_NickName,U_Level,U_LastQuestId FROM game_player"
            : Input_Query.text;
 
-        SendQuery(query, "user_info");
+        SendQuery(query, "game_player");
         
 
     }
